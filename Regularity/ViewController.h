@@ -6,10 +6,7 @@
 //  Copyright (c) 2014 Eric Bomgardner. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit.UIViewController;
 
 @interface ViewController : UIViewController
-
-
 @end
-
