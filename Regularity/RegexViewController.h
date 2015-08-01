@@ -8,5 +8,5 @@
 
 @import UIKit.UIViewController;
 
-@interface ViewController : UIViewController
+@interface RegexViewController : UIViewController
 @end
