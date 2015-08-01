@@ -8,27 +8,43 @@
 
 #import "RegexViewController.h"
 
+@import UIKit.UILabel;
 @import UIKit.UIScreen;
 
 @interface RegexViewController ()
-
-@property(nonatomic, strong) UITextField *textInputField;
-
+@property (weak, nonatomic) IBOutlet UITextField *regexTextField;
+@property (weak, nonatomic) IBOutlet UITextField *stringTextField;
+@property (weak, nonatomic) IBOutlet UILabel *matchLabel;
 @end
 
 @implementation RegexViewController
 
-- (void)loadView {
-  CGRect windowBounds = [[UIScreen mainScreen] applicationFrame];
-  UIView *view = [[UIView alloc] initWithFrame:windowBounds];
-  view.backgroundColor = [UIColor whiteColor];
+- (IBAction)stringValueChanged:(UITextField *)sender {
+  NSString *regularExpression = self.regexTextField.text;
+  NSString *stringToMatch = self.stringTextField.text;
 
-  _textInputField = [[UITextField alloc] initWithFrame:CGRectMake(100, 100, 150, 30)];
-  _textInputField.placeholder = @"Input string here.";
-  [view addSubview:_textInputField];
+  NSError *error = NULL;
+  NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regularExpression
+                                                                         options:0
+                                                                           error:&error];
 
-  self.view = view;
+  __block BOOL foundAMatch = NO;
+  NSRange fullStringRange = NSMakeRange(0, [stringToMatch length]);
+  [regex enumerateMatchesInString:stringToMatch
+                          options:0
+                            range:fullStringRange
+                       usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+                         if (NSEqualRanges(result.range, fullStringRange)) {
+                           foundAMatch = YES;
+                           *stop = YES;
+                         }
+                       }];
+
+  if (foundAMatch) {
+    self.matchLabel.text = @"String matches RegEx!";
+  } else {
+    self.matchLabel.text = @"String doesn't match!";
+  }
 }
-
 
 @end

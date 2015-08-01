@@ -13,6 +13,7 @@
 		076AAA4419E51B7C00FFB156 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076AAA4319E51B7C00FFB156 /* Images.xcassets */; };
 		076AAA5319E51B7C00FFB156 /* RegularityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 076AAA5219E51B7C00FFB156 /* RegularityTests.m */; };
 		07718AC91B6CA294004B385A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07718AC71B6CA294004B385A /* LaunchScreen.xib */; };
+		07718ACB1B6CA483004B385A /* RegexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07718ACA1B6CA483004B385A /* RegexViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		076AAA5119E51B7C00FFB156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		076AAA5219E51B7C00FFB156 /* RegularityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegularityTests.m; sourceTree = "<group>"; };
 		07718AC81B6CA294004B385A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Regularity/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		07718ACA1B6CA483004B385A /* RegexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegexViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				076AAA3B19E51B7C00FFB156 /* AppDelegate.m */,
 				076AAA3D19E51B7C00FFB156 /* RegexViewController.h */,
 				076AAA3E19E51B7C00FFB156 /* RegexViewController.m */,
+				07718ACA1B6CA483004B385A /* RegexViewController.xib */,
 				076AAA4319E51B7C00FFB156 /* Images.xcassets */,
 				076AAA3619E51B7C00FFB156 /* Supporting Files */,
 				07718AC71B6CA294004B385A /* LaunchScreen.xib */,
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07718AC91B6CA294004B385A /* LaunchScreen.xib in Resources */,
+				07718ACB1B6CA483004B385A /* RegexViewController.xib in Resources */,
 				076AAA4419E51B7C00FFB156 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
