@@ -20,4 +20,36 @@
   return self;
 }
 
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+  return self;
+}
+
+#pragma mark - NSObject
+
+- (NSString *)description {
+  return self.name;
+}
+
+- (BOOL)isEqual:(id)object {
+  if (self == object) {
+    return YES;
+  }
+
+  if (![object isKindOfClass:[State class]]) {
+    return NO;
+  }
+
+  State *state = object;
+  return [self.name isEqual:state]
+      && self.isStartState == state.isStartState
+      && self.isAcceptState == state.isAcceptState;
+}
+
+- (NSUInteger)hash {
+  return [self.name hash] ^ self.isStartState ^ self.isAcceptState;
+}
+
+
 @end

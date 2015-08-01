@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 Eric Bomgardner. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /** A state in the finite automaton. */
-@interface State : NSObject
+@interface State : NSObject<NSCopying>
 
 @property(nonatomic, copy, readonly) NSString *name;
 @property(nonatomic, assign, readonly) BOOL isStartState;
