@@ -14,6 +14,9 @@
 		076AAA5319E51B7C00FFB156 /* RegularityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 076AAA5219E51B7C00FFB156 /* RegularityTests.m */; };
 		07718AC91B6CA294004B385A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07718AC71B6CA294004B385A /* LaunchScreen.xib */; };
 		07718ACB1B6CA483004B385A /* RegexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07718ACA1B6CA483004B385A /* RegexViewController.xib */; };
+		07718ACE1B6CC08B004B385A /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = 07718ACD1B6CC08B004B385A /* State.m */; };
+		07718AD21B6CC1F9004B385A /* Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 07718AD11B6CC1F9004B385A /* Transition.m */; };
+		07718AD51B6CC362004B385A /* FiniteAutomaton.m in Sources */ = {isa = PBXBuildFile; fileRef = 07718AD41B6CC362004B385A /* FiniteAutomaton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		076AAA5219E51B7C00FFB156 /* RegularityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegularityTests.m; sourceTree = "<group>"; };
 		07718AC81B6CA294004B385A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Regularity/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		07718ACA1B6CA483004B385A /* RegexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegexViewController.xib; sourceTree = "<group>"; };
+		07718ACC1B6CC08B004B385A /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = State.h; path = Model/State.h; sourceTree = "<group>"; };
+		07718ACD1B6CC08B004B385A /* State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = State.m; path = Model/State.m; sourceTree = "<group>"; };
+		07718AD01B6CC1F9004B385A /* Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transition.h; path = Model/Transition.h; sourceTree = "<group>"; };
+		07718AD11B6CC1F9004B385A /* Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Transition.m; path = Model/Transition.m; sourceTree = "<group>"; };
+		07718AD31B6CC362004B385A /* FiniteAutomaton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FiniteAutomaton.h; path = Model/FiniteAutomaton.h; sourceTree = "<group>"; };
+		07718AD41B6CC362004B385A /* FiniteAutomaton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FiniteAutomaton.m; path = Model/FiniteAutomaton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +98,7 @@
 				076AAA4319E51B7C00FFB156 /* Images.xcassets */,
 				076AAA3619E51B7C00FFB156 /* Supporting Files */,
 				07718AC71B6CA294004B385A /* LaunchScreen.xib */,
+				07718ACF1B6CC09B004B385A /* Model */,
 			);
 			path = Regularity;
 			sourceTree = "<group>";
@@ -117,6 +127,19 @@
 				076AAA5119E51B7C00FFB156 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07718ACF1B6CC09B004B385A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07718AD31B6CC362004B385A /* FiniteAutomaton.h */,
+				07718AD41B6CC362004B385A /* FiniteAutomaton.m */,
+				07718ACC1B6CC08B004B385A /* State.h */,
+				07718ACD1B6CC08B004B385A /* State.m */,
+				07718AD01B6CC1F9004B385A /* Transition.h */,
+				07718AD11B6CC1F9004B385A /* Transition.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +243,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				076AAA3F19E51B7C00FFB156 /* RegexViewController.m in Sources */,
+				07718AD51B6CC362004B385A /* FiniteAutomaton.m in Sources */,
 				076AAA3C19E51B7C00FFB156 /* AppDelegate.m in Sources */,
+				07718AD21B6CC1F9004B385A /* Transition.m in Sources */,
 				076AAA3919E51B7C00FFB156 /* main.m in Sources */,
+				07718ACE1B6CC08B004B385A /* State.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
