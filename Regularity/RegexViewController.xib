@@ -17,34 +17,34 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Regular Expression" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oov-9N-gik">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Regular Expression" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oov-9N-gik">
                     <rect key="frame" x="150" y="165" width="300" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="300" id="LFA-yK-5ax"/>
                         <constraint firstAttribute="height" constant="60" id="z5N-Yg-dZl"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                     <connections>
                         <action selector="stringValueChanged:" destination="-1" eventType="editingChanged" id="h77-zI-c5d"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a String" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BoC-g9-rK4">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a String" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BoC-g9-rK4">
                     <rect key="frame" x="150" y="244" width="300" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="300" id="KX6-xu-UeQ"/>
                         <constraint firstAttribute="height" constant="60" id="lnM-dX-c03"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                     <connections>
                         <action selector="stringValueChanged:" destination="-1" eventType="editingChanged" id="uZd-Gy-TfV"/>
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esf-6o-Dgs">
-                    <rect key="frame" x="250" y="323" width="100" height="21"/>
+                    <rect key="frame" x="200" y="323" width="200" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="KCY-K4-hQ3"/>
+                        <constraint firstAttribute="width" constant="200" id="KCY-K4-hQ3"/>
                         <constraint firstAttribute="height" constant="21" id="WLq-hh-Dzd"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>

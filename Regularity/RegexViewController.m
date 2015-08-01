@@ -19,12 +19,16 @@
 
 @implementation RegexViewController
 
+- (void)viewDidLoad {
+  self.title = @"Evaluate a Regular Expression";
+}
+
 - (IBAction)stringValueChanged:(UITextField *)sender {
-  NSString *regularExpression = self.regexTextField.text;
+  NSString *regularExpressionString = self.regexTextField.text;
   NSString *stringToMatch = self.stringTextField.text;
 
   NSError *error = NULL;
-  NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regularExpression
+  NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regularExpressionString
                                                                          options:0
                                                                            error:&error];
 
@@ -41,9 +45,14 @@
                        }];
 
   if (foundAMatch) {
-    self.matchLabel.text = @"String matches RegEx!";
+    self.stringTextField.textColor = [UIColor colorWithRed:0.f green:0.4f blue:0.f alpha:1.f];
+    self.matchLabel.text = @"String matches";
+  } else if ([regularExpressionString length] && [stringToMatch length]){
+    self.stringTextField.textColor = [UIColor redColor];
+    self.matchLabel.text = @"String doesn't match";
   } else {
-    self.matchLabel.text = @"String doesn't match!";
+    self.stringTextField.textColor = [UIColor blackColor];
+    self.matchLabel.text = @"";
   }
 }
 
